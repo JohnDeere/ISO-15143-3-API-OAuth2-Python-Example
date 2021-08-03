@@ -158,7 +158,7 @@ def call_the_api():
         from xml.dom.minidom import parseString
         fleet = res.content
         dom = parseString(fleet)
-        settings['apiResponse'] = dom.toprettyxml()
+        settings['apiResponse'] = dom.toxml()
 
         organization_access_url = needs_organization_access()
         if organization_access_url is not None:
